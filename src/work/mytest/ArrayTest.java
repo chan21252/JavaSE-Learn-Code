@@ -14,6 +14,7 @@ public class ArrayTest {
     public static void main(String[] args) {
         int[] arr = initArray();
         System.out.println(getMinElement(arr));
+        System.out.println(getMaxElement(arr));
     }
 
     private static int[] initArray() {
@@ -27,7 +28,7 @@ public class ArrayTest {
         for (int i = 0; i < MAX_LENGTH; i++) {
             //输入5个以后可以退出
             if (i >= 5) {
-                System.out.println("已经输入5个数了。如果不想输入，请按q退出，输入其他继续");
+                System.out.println("已经输入" + i + "个数了。如果不想输入，请按q退出，输入其他继续");
                 if ("q".equals(in.next())) {
                     count = i;
                     break;
@@ -50,8 +51,10 @@ public class ArrayTest {
         //数组有效元素装载到新数组
         int[] resultArray = new int[count];
         for (int i = 0; i < resultArray.length; i++) {
+            System.out.print(inputArray[i] + "\t");
             resultArray[i] = inputArray[i];
         }
+        System.out.println();
 
         return resultArray;
     }
@@ -60,23 +63,40 @@ public class ArrayTest {
         int minElement = array[0];      //假设最小的数是a[0]
         int minCount = 0;       //最小数的个数
 
-        for (int i = 0; i < array.length; i++) {
-            for (int j = i + 1; j < array.length; j++) {
-                //当前元素和剩余元素比较，如果找到一个更小的，
-                if (array[j] <= array[i]) {
-                    minElement = array[j];
-                    break;
-                }
+        for (int e : array) {
+            if (e < minElement) {
+                minElement = e;
             }
         }
 
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == minElement) {
+        for (int e : array) {
+            if (e == minElement) {
+
                 minCount++;
             }
         }
 
         System.out.println("最小的数是 " + minElement + " ，有 " + minCount + "个， ");
         return minElement;
+    }
+
+    private static int getMaxElement(int[] array) {
+        int maxElement = array[0];
+        int maxCount = 0;
+
+        for (int e : array) {
+            if (e > maxElement) {
+                maxElement = e;
+            }
+        }
+
+        for (int e : array) {
+            if (e == maxElement) {
+                maxCount++;
+            }
+        }
+
+        System.out.println("最大的数是 " + maxElement + " ，有 " + maxCount + "个， ");
+        return maxElement;
     }
 }
