@@ -5,10 +5,14 @@ package unit6.entity;
  * @author cuican
  */
 public class Person {
-    /* 定义类的实例成员属性 */
+    /* 定义实例成员属性 */
     public String name;    //姓名
     protected int age;        //年龄
     private String address; //地址
     char sex;       //性别
     double height;  //身高
+
+    /* 定义类的属性（静态，static修饰） */
+    public static String feature;       //共同特征
+    public static final int MAX_AGE = 100;  //年龄上限
 }
