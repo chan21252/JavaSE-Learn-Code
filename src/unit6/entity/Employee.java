@@ -36,9 +36,9 @@ public class Employee {
     }
 
     public void setSex(char sex) {
-        if (sex != '男' && sex != '女')
+        if (sex != '男' && sex != '女') {
             this.sex = '男';
-        else
+        } else
             this.sex = sex;
     }
 
