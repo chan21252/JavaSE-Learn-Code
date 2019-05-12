@@ -27,4 +27,13 @@ public class Student {
         System.out.println("我的名字是 " + this.name);
         System.out.println("我的年龄是 " + this.age);
     }
+
+    /**
+     * 引用参数传递
+     */
+    public void readBook(Book book) {
+        System.out.println("我正在看 " + book.getTitle() + " ，共 " + book.getPageSize() + " 页。");
+        book.setTitle("红楼梦");
+        book.setPageSize(1000);
+    }
 }
