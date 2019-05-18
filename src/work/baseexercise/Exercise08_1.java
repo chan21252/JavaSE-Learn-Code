@@ -1,13 +1,13 @@
 package work.baseexercise;
 
 /*
-     *
-    ***
-   *****
-  *******
+ *
+ ***
+ *****
+ *******
  *********
 
-*/
+ */
 public class Exercise08_1 {
     public static void main(String[] args) {
         /*
@@ -20,11 +20,11 @@ public class Exercise08_1 {
          */
 
         final int N = 5;
-        for (int line=1; line<=N; line++){
-            for (int space=1; space<=(N-line); space++){
+        for (int line = 1; line <= N; line++) {
+            for (int space = 1; space <= (N - line); space++) {
                 System.out.print(" ");
             }
-            for (int star=1; star<=(2*line-1); star++){
+            for (int star = 1; star <= (2 * line - 1); star++) {
                 System.out.print("*");
             }
             System.out.println();

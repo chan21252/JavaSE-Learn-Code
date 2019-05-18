@@ -26,36 +26,36 @@ public class Exercise08_4 {
         final int N = 5;
 
         //上半部
-        for (int line=1; line<=N; line++){
-            for (int space1=1; space1<=(N-line); space1++){
+        for (int line = 1; line <= N; line++) {
+            for (int space1 = 1; space1 <= (N - line); space1++) {
                 System.out.print(" ");
             }
 
             System.out.print("*");
 
-            for (int space2=1; space2<=2*(line-1); space2++){
+            for (int space2 = 1; space2 <= 2 * (line - 1); space2++) {
                 System.out.print(" ");
             }
 
-            if (line>1){
+            if (line > 1) {
                 System.out.print("*");
             }
             System.out.println();
         }
 
         //下半部
-        for (int line=1; line<=N-1; line++){
-            for (int space1=1; space1<=line; space1++){
+        for (int line = 1; line <= N - 1; line++) {
+            for (int space1 = 1; space1 <= line; space1++) {
                 System.out.print(" ");
             }
 
             System.out.print("*");
 
-            for (int space2=1; space2<=2*(N-line-1); space2++){
+            for (int space2 = 1; space2 <= 2 * (N - line - 1); space2++) {
                 System.out.print(" ");
             }
 
-            if (N-line>1){
+            if (N - line > 1) {
                 System.out.print("*");
             }
 

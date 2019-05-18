@@ -1,4 +1,4 @@
-package unit6.inherit.entity;
+package unit7.entity;
 
 /**
  * 这是一个终极类，final修饰的类不能被继承

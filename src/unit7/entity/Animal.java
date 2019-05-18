@@ -1,7 +1,10 @@
-package unit6.inherit.entity;
+package unit7.entity;
 
 public class Animal {
-    public Animal(){
+    private String desc = "我们都是好朋友，要爱护动物";
+
+    public Animal(String desc){
+        this.desc = desc;
         System.out.println("调用Animal构造器");
     }
 
@@ -22,5 +25,9 @@ public class Animal {
      */
     protected void run(){
         System.out.println("奔跑");
+    }
+
+    public static void staMethod(){
+        System.out.println("父类的静态方法");
     }
 }

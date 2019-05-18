@@ -1,8 +1,12 @@
-package unit6.inherit;
+package unit7;
 
-import unit6.inherit.entity.Animal;
+import unit7.entity.Animal;
 
 public class Dog extends Animal {
+
+    Dog(){
+        super("狗");
+    }
     public void testPro(){
         this.run();
     }

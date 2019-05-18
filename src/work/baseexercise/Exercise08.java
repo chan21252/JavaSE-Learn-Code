@@ -2,13 +2,13 @@ package work.baseexercise;
 
 /**
  * 打印出如下图案（菱形）
- *    *
- *   ***
- *  ******
+ * *
+ * ***
+ * ******
  * ********
- *  ******
- *   ***
- *    *
+ * ******
+ * ***
+ * *
  */
 public class Exercise08 {
 
@@ -33,16 +33,16 @@ public class Exercise08 {
         final int N = 4;
 
         //画上半部
-        for (int i=1; i<=N; i++){
-            for (int j=1; j<=(N-i); j++){
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= (N - i); j++) {
                 System.out.print(" ");
             }
-            if (i <= 2){
-                for (int k=1; k<=(i+i/2); k++){
+            if (i <= 2) {
+                for (int k = 1; k <= (i + i / 2); k++) {
                     System.out.print("*");
                 }
-            }else {
-                for (int k=1; k<=2*i; k++){
+            } else {
+                for (int k = 1; k <= 2 * i; k++) {
                     System.out.print("*");
                 }
             }
@@ -50,16 +50,16 @@ public class Exercise08 {
         }
 
         //画下半部
-        for (int i=1; i<=N-1; i++){
-            for (int j=1; j<=i; j++){
+        for (int i = 1; i <= N - 1; i++) {
+            for (int j = 1; j <= i; j++) {
                 System.out.print(" ");
             }
-            if ((N - i) <= 2){
-                for (int k=1; k<=((N-i)+(N-i)/2) ; k++){
+            if ((N - i) <= 2) {
+                for (int k = 1; k <= ((N - i) + (N - i) / 2); k++) {
                     System.out.print("*");
                 }
-            }else {
-                for (int k=1; k<=2*(N-i); k++){
+            } else {
+                for (int k = 1; k <= 2 * (N - i); k++) {
                     System.out.print("*");
                 }
             }

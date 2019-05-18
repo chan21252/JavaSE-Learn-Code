@@ -1,4 +1,4 @@
-package unit6.inherit;
+package unit7;
 
 public class Parent {
 }
