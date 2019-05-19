@@ -1,4 +1,4 @@
-package work.baseexercise;
+package work.baseexercise.base;
 
 /**
  * 打印出如下图案（菱形）

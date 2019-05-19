@@ -1,4 +1,4 @@
-package work.baseexercise;
+package work.baseexercise.base;
 
 /*
 
