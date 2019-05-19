@@ -15,3 +15,9 @@ https://chan21252.github.io/2019/05/06/javase-003-array/
 
 ## 面向对象基础
 https://chan21252.github.io/2019/05/07/javase-004-OOP/
+
+### 继承
+https://chan21252.github.io/2019/05/13/javase-005-OOP-inheritance/
+
+### 抽象、接口和内部类
+https://chan21252.github.io/2019/05/15/javase-006-OOP-abstract/
