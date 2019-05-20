@@ -17,9 +17,9 @@ public class Work3 {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println("请输入任盈盈的年龄，\n"+
-                "任盈盈比张无忌小"+ ZWJ_RYY_GAP +"岁，\n"+
-                "任我行的年龄比张无忌和任盈盈的年龄和大"+ RWX_ZWJRYY_GAP +"岁。回车继续：");
+        System.out.println("请输入任盈盈的年龄，\n" +
+                "任盈盈比张无忌小" + ZWJ_RYY_GAP + "岁，\n" +
+                "任我行的年龄比张无忌和任盈盈的年龄和大" + RWX_ZWJRYY_GAP + "岁。回车继续：");
         renYingYing = in.nextInt();     //输入任盈盈年龄
 
         //计算其他人年龄

@@ -1,7 +1,5 @@
 package unit8.interfaces;
 
-import unit8.interfaces.CountManager;
-
 public interface ValidataManager extends CountManager {
     boolean YES = true;
     boolean NO = false;

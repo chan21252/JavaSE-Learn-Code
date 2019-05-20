@@ -36,7 +36,7 @@ public class TypeConvert {
         System.out.println(by1);
 
         int num2 = 129;
-        byte by2 = (byte)num2;
+        byte by2 = (byte) num2;
         System.out.println(by2);    //-127
         /*
         int类型的129的在计算机中的二进制形式

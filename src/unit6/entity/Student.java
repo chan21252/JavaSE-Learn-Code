@@ -23,7 +23,7 @@ public class Student {
     /**
      * 无参数，无返回值方法
      */
-    public void showSelf(){
+    public void showSelf() {
         System.out.println("我的名字是 " + this.name);
         System.out.println("我的年龄是 " + this.age);
     }

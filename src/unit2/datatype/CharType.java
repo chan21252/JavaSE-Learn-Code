@@ -19,12 +19,12 @@ public class CharType {
         System.out.println("ch 的值是 " + ch);
 
         char ch2 = '国';
-        System.out.println((int)ch2);       //使用强制类型转换获取char字符对应的int数值
+        System.out.println((int) ch2);       //使用强制类型转换获取char字符对应的int数值
 
         num = '中';
-        System.out.println("num 输出字符\'中\'的结果 " + (char)num);
+        System.out.println("num 输出字符\'中\'的结果 " + (char) num);
 
         num = ch2;
-        System.out.println((char)num);
+        System.out.println((char) num);
     }
 }

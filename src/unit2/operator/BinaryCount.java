@@ -2,9 +2,9 @@ package unit2.operator;
 
 public class BinaryCount {
     public static void main(String[] args) {
-       int n = 50;
-       int m = 60;
-       int age = 18;
+        int n = 50;
+        int m = 60;
+        int age = 18;
        /*boolean bool = n > m & ++age == 18;
        System.out.println(bool);
        System.out.println(age);*/

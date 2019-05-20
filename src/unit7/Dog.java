@@ -4,10 +4,11 @@ import unit7.entity.Animal;
 
 public class Dog extends Animal {
 
-    Dog(){
+    Dog() {
         super("狗");
     }
-    public void testPro(){
+
+    public void testPro() {
         this.run();
     }
 }

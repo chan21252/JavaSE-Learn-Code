@@ -13,9 +13,9 @@ package work.day02;
 public class Work3 {
     static final byte SEASON_NUM = 4;           //定义byte类型常量，一年有4个季节
     static final byte WEEK_DAY_NUM = 7;         //定义byte类型常量，一周有7天
+    static final byte TRAFFIC_LIGHT_NUM = 3;    //定义byte类型常量，信号灯有3种
     static String dogsColor;                    //定义字符串类型变量，狗的颜色可变
     static double moneyNum;                     //定义double类型变量，银行的存款可变
-    static final byte TRAFFIC_LIGHT_NUM = 3;    //定义byte类型常量，信号灯有3种
 
     public static void main(String[] args) {
         dogsColor = "白色";          //为dogscolor变量赋值
@@ -29,15 +29,15 @@ public class Work3 {
         printTrafficLightNum();
     }
 
-    public static void printSeanNum(){
+    public static void printSeanNum() {
         System.out.println("一年的季节有 " + SEASON_NUM + " 个");
     }
 
-    public static void printWeekdayNum(){
+    public static void printWeekdayNum() {
         System.out.println("一周有 " + WEEK_DAY_NUM + " 天");
     }
 
-    public static void printDogColor(){
+    public static void printDogColor() {
         System.out.println("狗的颜色是 " + dogsColor);
     }
 
@@ -45,7 +45,7 @@ public class Work3 {
         System.out.println("存款数量是 " + moneyNum);
     }
 
-    public static void printTrafficLightNum(){
+    public static void printTrafficLightNum() {
         System.out.println("交通信号灯的数量是 " + TRAFFIC_LIGHT_NUM + "个");
     }
 }
