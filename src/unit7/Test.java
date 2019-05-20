@@ -27,5 +27,9 @@ public class Test {
         ani.staMethod();
         mammal.staMethod();
 
+        Child c = new Child();
+        c.setName("123");
+        System.out.println(c.getParentName());
+
     }
 }
