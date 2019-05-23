@@ -33,7 +33,7 @@ public class TypeConvert {
         sho1 = (short) ch1;
         by1 = (byte) sho1;
 
-        System.out.println(by1);
+        //System.out.println(by1);
 
         int num2 = 129;
         byte by2 = (byte) num2;
