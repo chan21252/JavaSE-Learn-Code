@@ -13,3 +13,5 @@
 7. 常用类库
     1. [Object类，包装类，System类](https://chan21252.github.io/2019/05/19/javase-007-class-library-01/)
     2. [String类](https://chan21252.github.io/2019/05/20/javase-007-class-library-02/)
+    3. [日期时间类和Math类](http://blog.5460cc.com/2019/05/23/javase-007-class-library-03/)
+    4. [List、Set、Map接口和实现类](http://blog.5460cc.com/2019/05/26/javase-007-class-library-04/)
