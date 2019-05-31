@@ -1,7 +1,10 @@
 package unit12;
 
+import unit12.entity.Employee;
+
 import java.io.*;
 import java.net.URI;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -216,6 +219,148 @@ public class FileManager {
                     e.printStackTrace();
                 }
             }
+        }
+    }
+
+    /**
+     * 使用BufferedWriter写入文件
+     *
+     * @param dir
+     */
+    public static void useBufferedWriter(File dir, String fileName, String content) {
+        if (dir.exists()) {
+            File file = new File(dir, fileName);
+            Writer writer = null;
+            BufferedWriter bw = null;
+            try {
+                writer = new FileWriter(file);
+                bw = new BufferedWriter(writer);
+                char[] chs = content.toCharArray();
+                bw.write(chs);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (bw != null) bw.close();
+                    if (writer != null) writer.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            System.out.println("路径：" + dir + "不存在");
+            System.out.println("创建目录成功？" + dir.mkdirs());
+        }
+    }
+
+    /**
+     * 复制target文件到dir目录
+     *
+     * @param target 要复制的文件
+     * @param dir    复制到的目录
+     */
+    public static void copyFile(File target, File dir) {
+        if (target.exists()) {
+            if (!dir.exists()) {
+                dir.mkdirs();   //如果不存在，创建目录
+            }
+            if (!dir.isDirectory()) {
+                System.out.println("dir不是目录！");
+                return;
+            }
+            InputStream in = null;  //输入流
+            OutputStream out = null;    //输出流
+            File copyFile = null; //文件副本
+            try {
+                in = new FileInputStream(target);
+
+                /*
+                避免文件名重复被覆盖，使用系统时间的时间戳作为文件名前缀
+                 */
+                copyFile = new File(dir, new Date().getTime() + "-" + target.getName());
+                out = new FileOutputStream(copyFile);
+
+                byte[] bytes = new byte[1024];
+                int count = 0;
+                while ((count = in.read(bytes, 0, bytes.length)) != -1) {
+                    System.out.println("文件复制中...请稍后");
+                    out.write(bytes, 0, count);
+                }
+                System.out.println("文件复制完成");
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (in != null) in.close();
+                    if (out != null) in.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            System.out.println("target文件不存在！");
+        }
+    }
+
+    /**
+     * 将Employee对象保存到文件（序列化）
+     *
+     * @param employee 序列化对象
+     */
+    public static void javaSerializable(Employee employee, File target) {
+        if (employee == null)
+            return;
+
+        /*if (!target.exists()){
+            try {
+                boolean bool = target.createNewFile();
+                if (!bool)
+                    return;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }*/
+
+        OutputStream out = null;
+        ObjectOutputStream oos = null;
+
+        try {
+            out = new FileOutputStream(target);
+            oos = new ObjectOutputStream(out);
+            oos.writeObject(employee);  //将序列化对象写入到文件中
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (oos != null) oos.close();
+                if (out != null) out.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * java反序列化文件
+     *
+     * @param target 目标文件
+     */
+    public static void javaDeserializable(File target) {
+        if (!target.exists())
+            return;
+
+        InputStream in = null;
+        ObjectInputStream ois = null;
+
+        try {
+            in = new FileInputStream(target);
+            ois = new ObjectInputStream(in);
+            //反序列化
+            Object obj = ois.readObject();
+            Employee employee = obj != null ? (Employee) obj : null;
+            System.out.println(employee);
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 }
