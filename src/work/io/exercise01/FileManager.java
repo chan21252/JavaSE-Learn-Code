@@ -1,7 +1,9 @@
 package work.io.exercise01;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 文件IO操作类
@@ -173,5 +175,43 @@ public class FileManager {
                 e.printStackTrace();
             }
         }
+    }
+
+    /**
+     * 逆序读取字符文件内容
+     *
+     * @param file 要读取的文件
+     */
+    public static void readCharFileReverse(File file) {
+        if (!file.exists()) {
+            System.out.println("文件不存在");
+            return;
+        }
+
+        RandomAccessFile raFile = null;
+        try {
+            raFile = new RandomAccessFile(file, "r");
+            /* 设置文件指针偏移量到文件末尾 */
+            long filePointerIndex = raFile.length() - 1;
+            raFile.seek(filePointerIndex);
+
+            /* 从最后开始读取文件，读取完指针前移，直到指针为0 */
+            //
+            List<Character> charList = new ArrayList<>();
+            //指针偏移量
+            int count = 0;
+            while (raFile.getFilePointer() >= 0) {
+                char c = raFile.readChar();
+                charList.add(c);
+                count++;
+                raFile.seek(filePointerIndex - count);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("文件不存在");
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
