@@ -1,5 +1,7 @@
-package work.io.exercise01;
+package work.io.exercise01_07;
 
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -71,5 +73,36 @@ public class StringManager {
             }
         }
         return String.valueOf(chs);
+    }
+
+    /**
+     * 获取字符串编码
+     *
+     * @param sb 字符串
+     * @return 编码
+     */
+    public static String getStringCharset(String sb) {
+        final String ISO_8859_1 = StandardCharsets.ISO_8859_1.toString();
+        final String UTF_8 = StandardCharsets.UTF_8.toString();
+        final String GBK = "GBK";
+        try {
+            String iso8859 = new String(sb.getBytes(ISO_8859_1));
+            String utf8 = new String(sb.getBytes(UTF_8));
+            String gbk = new String(sb.getBytes(GBK));
+
+            if (iso8859.equals(sb)) {
+                return ISO_8859_1;
+            } else if (utf8.equals(sb)) {
+                return UTF_8;
+            } else if (gbk.equals(sb)) {
+                return GBK;
+            }
+
+            return "unknown";
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        return "unknown";
     }
 }

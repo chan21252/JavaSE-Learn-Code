@@ -1,11 +1,12 @@
-package work.io.exercise01;
+package work.io.exercise01_07;
+
+import work.io.FileManager;
 
 import java.io.File;
-import java.util.Scanner;
 
 public class TestFileManager {
     public static void main(String[] args) {
-        //在D盘创建一个ss目录
+        /*//在D盘创建一个ss目录
         File dirSs = new File("D:/ss/");
         FileManager.createDir(dirSs);
 
@@ -35,6 +36,10 @@ public class TestFileManager {
         //拷贝
         File file = new File("D:/bg.jpg");
         File copyDir = new File("F:/");
-        FileManager.copyFile(file, copyDir);
+        FileManager.copyFile(file, copyDir);*/
+
+        File file1 = new File("E:/files/test.txt");
+        File file1Reverse = new File("E:/files/test-r.txt");
+        FileManager.readCharFileReverse(file1, file1Reverse);
     }
 }
