@@ -1,5 +1,10 @@
 package work.thread.exercise02;
 
+/**
+ * 员工类
+ *
+ * @author CuiCan
+ */
 public class Employee {
     private String id;
     private String name;
