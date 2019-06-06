@@ -3,7 +3,6 @@ package unit14.clientsocket;
 import java.io.*;
 import java.net.InetSocketAddress;
 import java.net.Socket;
-import java.net.SocketAddress;
 import java.util.Scanner;
 
 public class Client {
@@ -14,8 +13,8 @@ public class Client {
         Socket client = null;       //客户端套接字
         client = new Socket();      //创建未连接的套接字对象
 
-        InetSocketAddress address = new InetSocketAddress("localhost", 9595);
-        InetSocketAddress remoteAddress = new InetSocketAddress("localhost", 9898);
+        InetSocketAddress address = new InetSocketAddress("localhost", 9898);
+        InetSocketAddress remoteAddress = new InetSocketAddress("localhost", 9595);
         InputStream in = null;
         OutputStream out = null;
         DataInputStream din = null;
@@ -45,7 +44,6 @@ public class Client {
                 }
                 //在不需要套接字时，关闭套接字，通常先关闭套接字的输入输出流
                 //client.close();
-
             }
 
         } catch (IOException e) {

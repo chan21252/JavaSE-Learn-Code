@@ -13,14 +13,14 @@ public class Server {
         DataOutputStream dout = null;
 
         try {
-            serverSocket = new ServerSocket(9898);
+            serverSocket = new ServerSocket(9595);
             Socket client = null;
+            System.out.println("等待链接......");
+            client = serverSocket.accept();
+            System.out.println("链接成功");
 
-            //循环等待客户端socket
+            //循环处理客户端socket
             while (true) {
-                System.out.println("等待链接......");
-                client = serverSocket.accept();
-                System.out.println("链接成功");
                 in = client.getInputStream();
                 din = new DataInputStream(in);
                 out = client.getOutputStream();
