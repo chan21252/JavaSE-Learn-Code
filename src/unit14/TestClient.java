@@ -5,19 +5,22 @@ import java.net.*;
 
 public class TestClient {
     public static void main(String[] args) {
+        //创建要发送的数据报包
         byte[] buffer = new String("我的名字是火云邪神").getBytes();
         DatagramPacket dp = new DatagramPacket(buffer, buffer.length);
 
         byte[] buffer2 = new byte[60];
         DatagramPacket dp2 = new DatagramPacket(buffer2, buffer2.length);
+
+        //远程的socket地址
         SocketAddress address = new InetSocketAddress("localhost", 9595);
 
         try {
             DatagramSocket ds = new DatagramSocket(8888);
             ds.connect(address);
             System.out.println(ds.isConnected());
-            ds.disconnect();
-            System.out.println(ds.isConnected());
+            //ds.disconnect();
+            //System.out.println(ds.isConnected());
 
             /* 向目的地发送数据报包 */
             ds.send(dp);
