@@ -1,6 +1,6 @@
-package work.reflect.exercise01;
+package work.reflect.exercise05;
 
-public class Person {
+public class Person extends Base {
     private String name;
     private int age;
 
