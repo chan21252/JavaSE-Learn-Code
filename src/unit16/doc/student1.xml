@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<student-list>
+    <student code="stu001">
+        <name>令狐冲</name>
+        <gender>男</gender>
+        <birthday>1988/10/22</birthday>
+        <address>华山</address>
+    </student>
+    <student code="stu002">
+        <name>任盈盈</name>
+        <gender>女</gender>
+        <birthday>1990/10/22</birthday>
+        <address>黑木崖</address>
+    </student>
+    <student code="stu003">
+        <name>岳灵珊</name>
+        <gender>女</gender>
+        <birthday>1991/10/22</birthday>
+        <address>华山</address>
+    </student>
+</student-list>
