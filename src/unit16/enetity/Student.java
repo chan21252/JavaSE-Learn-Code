@@ -9,6 +9,18 @@ public class Student {
     private String gender;
     private String address;
 
+    public Student() {
+    }
+
+    public Student(String code, String name, Date birthday,
+                   String gender, String address) {
+        this.code = code;
+        this.name = name;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.address = address;
+    }
+
     public String getCode() {
         return code;
     }
